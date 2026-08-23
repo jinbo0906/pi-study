@@ -1,0 +1,27 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+.next/
+.wrangler/
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+auth.json
+.pi/
+.codex/
+
+# Agent sessions and temporary data
+*.jsonl
+*.tmp
+*.temp
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

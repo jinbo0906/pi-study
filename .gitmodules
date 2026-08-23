@@ -1,0 +1,12 @@
+[submodule "pi"]
+	path = pi
+	url = https://github.com/earendil-works/pi.git
+	branch = main
+[submodule "pi-textbook"]
+	path = pi-textbook
+	url = https://github.com/hahhforest/pi-textbook.git
+	branch = main
+[submodule "pi-course"]
+	path = pi-course
+	url = https://github.com/hahhforest/pi.git
+	branch = course/build-your-own-pi
