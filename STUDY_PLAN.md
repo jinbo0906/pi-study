@@ -26,7 +26,7 @@
 
 | 状态 | Checkpoint | 主题 | 主要上游对照 |
 | --- | ---: | --- | --- |
-| `[ ]` | 00 | 完整离线 Agent 轨迹 | `packages/coding-agent/src/main.ts` |
+| `[x]` | 00 | 完整离线 Agent 轨迹 | `packages/coding-agent/src/main.ts` |
 | `[ ]` | 01 | TypeScript 协议与运行时收窄 | `packages/agent/src/types.ts` |
 | `[ ]` | 02 | EventStream | `packages/ai/src/utils/event-stream.ts` |
 | `[ ]` | 03 | Canonical Message IR | `packages/ai/src/types.ts` |

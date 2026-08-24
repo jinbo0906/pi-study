@@ -5,7 +5,24 @@
 ## 索引
 
 - [Checkpoint 00：完整 Agent 闭环](00-prologue.md)
+- [Checkpoint 00：环境准备与命令记录](00-setup-log.md)
 - [章节笔记模板](TEMPLATE.md)
+
+## 文件命名
+
+- `XX-topic.md`：Checkpoint `XX` 的概念与源码理解，例如 `00-prologue.md`。
+- `XX-setup-log.md`：该章首次环境准备、定位和 practice 创建记录。
+- `XX-experiment-NN.md`：该章第 `NN` 个独立故障实验；编号从 `01` 开始。
+- `TEMPLATE.md`：新章节笔记模板，不带 checkpoint 编号。
+
+同一 Checkpoint 的文件统一使用两位编号前缀，使目录排序与课程的 `00`–`14` 顺序一致。命令记录和概念笔记分开，避免终端输出淹没原理总结。
+
+## 路径规范
+
+- 文档中的项目路径一律相对于 `pi-study/` 仓库根目录书写，例如 `pi-course/` 和 `pi-practice-00/`。
+- 可复制命令默认从仓库根目录开始，使用 `./` 或 `../` 表达目录关系。
+- 终端工具自动打印的绝对路径在收录时转换为等价相对路径，并注明已经规范化。
+- 不记录盘符、操作系统用户名、用户主目录或其他仅适用于单台机器的路径。
 
 ## 记录原则
 
