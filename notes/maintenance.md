@@ -51,6 +51,8 @@ node --test pi-course/packages/pi-course/dist/test/*.test.js
 
 ## 检查范围与后续
 
+主维护提交 [`0c75109`](https://github.com/jinbo0906/pi-study/commit/0c751093cc08a6439583aed56fc9ee9d2b57dff7) 已正常推送到 origin/main，远程 SHA 与本地一致。[GitHub Actions 验证](https://github.com/jinbo0906/pi-study/actions/runs/36684667872)的 Linux / Windows、Node 22 / 24 四个 job 均成功：每个组合的 14 项学习测试、类型检查、安装及 demo 通过；Linux 还通过完整课程 target 的 120/120 测试。Windows 仅运行维护后的跨平台最小示例，完整课程的 4 项平台限制仍保留上述结论。
+
 最终 diff 已审阅，未包含密钥、个人路径、缓存、dist 或临时练习。检查器不扫描缓存、dist 或子模块全文，外部固定源码链接通过本地 Git 对象核对；在线教材地址仅为上游来源，不依赖网站实时内容。CI 的远程结果以 GitHub Actions 为准，未完成的 job 不能记作通过。
 
 尚未调用真实 Provider、未运行官方整仓库测试或教材网站构建、未实跑 coding-agent 会话/压缩/扩展。默认实验没有密钥或模型费用。下一步优先自己完成 01–09 重建，再在 Linux 实验 08/12，最后补持久化与 compaction 的最小验证。
