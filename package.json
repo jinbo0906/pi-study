@@ -1,0 +1,20 @@
+{
+  "name": "pi-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:docs": "node scripts/check-docs.mjs",
+    "check:versions": "node scripts/create-practice.mjs --check",
+    "test:docs": "node --test scripts/check-docs.test.mjs",
+    "check:practice": "npm --prefix pi-practice-00 run check",
+    "test:practice": "npm --prefix pi-practice-00 test",
+    "demo:practice": "npm --prefix pi-practice-00 run demo",
+    "check:labs": "npm --prefix labs run check",
+    "test:labs": "npm --prefix labs test",
+    "demo:labs": "npm --prefix labs run demo",
+    "practice": "node scripts/create-practice.mjs",
+    "check": "npm run check:docs && npm run check:versions && npm run check:practice && npm run check:labs",
+    "test": "npm run test:docs && npm run test:practice && npm run test:labs"
+  },
+  "engines": {"node": ">=22.19.0"}
+}

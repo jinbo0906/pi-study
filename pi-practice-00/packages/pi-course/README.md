@@ -1,28 +1,15 @@
-# 造一个 Pi · commit 教材
+# Checkpoint 00 · 完整离线反馈轨迹
 
-这不是上游实现的缩写版，而是一条为学习设计的累积历史。分支
-`course/build-your-own-pi` 从 Pi 上游固定提交 `8479bd84` 出发；章节
-00～14 各对应一个可检出、可测试的 commit。
+这个包来自课程 commit `f9798b7ce690abeca3539e3410e5f402bc65862d`，只包含第 00 章观察用 fixture 和两项测试。它不是完整的 `pi-course` 仓库；完整课程有 00～14 章 checkpoint，保存在根仓库的 `pi-course` 子模块中。
 
-## 怎么跟着学
+从练习根目录按 [LEARNING.md](../../LEARNING.md) 安装，再执行 `npm run check`、`npm test`、`npm run demo`。三个命令也可以加 `-w @pi/course` 从练习根直接调用本包。
 
-1. 在教材页面读本章，只先写“我预测会发生什么”。
-2. 让陪学 Agent 阅读本文件、`AGENT_GUIDE.md`、本章 commit 与它的 parent。
-3. Agent 先解释本章 diff 的责任边界，再一次只给一个动作，不直接粘贴整份答案。
-4. 每个动作后运行 `npm test -w @pi/course` 或本章指定的聚焦测试。
-5. 你能解释首次失败属于哪一层后，再进入下一章。
+[src/demo/prologue.ts](src/demo/prologue.ts) 用 `structuredClone` 返回固定的七步事件，验证 call/result 配对后提供展示文本；[test/00-prologue.test.ts](test/00-prologue.test.ts) 同时覆盖正常轨迹和悬空调用。它不连接 Provider，不执行真实文件工具，不代表官方运行时的完整行为。
 
-查看累积历史：
+学习时先预测 owner 和错误，再运行与解释。需要陪练时使用 [AGENT_GUIDE.md](AGENT_GUIDE.md)。对照完整课程历史应在课程子模块中执行：
 
-```bash
-git log --reverse --oneline -- packages/pi-course
+```sh
+git -C pi-course diff 8479bd84743e8889f728acb21a62794102db0529 f9798b7ce690abeca3539e3410e5f402bc65862d -- packages/pi-course
 ```
 
-查看某一章到底增加了什么：
-
-```bash
-git show --stat <本章提交>
-git diff <本章提交>^ <本章提交> -- packages/pi-course
-```
-
-`迁移练习` 是掌握后的可选挑战，不是第一次学习的放行条件。
+上面命令从 `pi-study` 根目录执行。保留 fixture 与测试，扩展实验只操作 `runPrologueDemo()` 返回的副本；从第 01 章开始才逐步重建协议实现。
